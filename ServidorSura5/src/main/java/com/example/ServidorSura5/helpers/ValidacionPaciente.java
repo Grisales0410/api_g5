@@ -1,4 +1,4 @@
-package com.example.ServidorSura5.helpers;
+/* package com.example.ServidorSura5.helpers;
 
 import com.example.ServidorSura5.modelos.Paciente;
 
@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ValidacionPaciente {
+ public class ValidacionPaciente {
 
     //1. Inyectar un objeto de la clase modelo
     // Inyectar es igual a traer una clase y usarla dentro de otra
@@ -105,9 +105,13 @@ public class ValidacionPaciente {
             return false;
         }
     }
-    public boolean validarGrupoIngresos(String grupoIngresos){
+    public boolean validarGrupoIngresos(String grupoIngresos){}
 
-    }
+
     public boolean validarFechaAfiliacion(LocalDate fechaAfiliacion){}
 
 }
+
+ */
+
+

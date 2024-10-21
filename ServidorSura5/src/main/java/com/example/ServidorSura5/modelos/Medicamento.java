@@ -1,5 +1,6 @@
 package com.example.ServidorSura5.modelos;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -21,6 +22,11 @@ public class Medicamento {
     private String contraIndicaciones;
     private String registro;
     private Boolean tieneCopago;
+
+    @ManyToOne
+    @JoinColumn(name = "fk_paciente", referencedColumnName = "id")
+    @JsonBackReference
+    private Paciente paciente;
 
     public Medicamento() {
     }

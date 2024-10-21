@@ -1,5 +1,6 @@
 package com.example.ServidorSura5.modelos;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,6 +17,11 @@ public class Enfermedad {
     private String clasificacion;
     private String grado;
     private Double probabilidadVida;
+
+    @ManyToOne
+    @JoinColumn(name = "fk_paciente", referencedColumnName = "id")
+    @JsonBackReference
+    private Paciente paciente;
 
     public Enfermedad() {
     }
