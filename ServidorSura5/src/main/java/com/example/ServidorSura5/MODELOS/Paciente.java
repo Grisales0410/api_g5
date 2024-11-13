@@ -1,4 +1,4 @@
-package com.example.ServidorSura5.modelos;
+package com.example.ServidorSura5.MODELOS;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;

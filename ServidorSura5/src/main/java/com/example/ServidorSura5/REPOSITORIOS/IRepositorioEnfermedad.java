@@ -1,6 +1,6 @@
-package com.example.ServidorSura5.repositorios;
+package com.example.ServidorSura5.REPOSITORIOS;
 
-import com.example.ServidorSura5.modelos.Enfermedad;
+import com.example.ServidorSura5.MODELOS.Enfermedad;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
