@@ -5,10 +5,7 @@ import com.example.ServidorSura5.SERVICIOS.ServicioSignoVital;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/signovital")
@@ -23,6 +20,20 @@ public class ControladorSignoVital {
             return ResponseEntity
                     .status(HttpStatus.OK)
                     .body(servicioSignoVital.guardarSignoVital(datos));
+
+        }catch (Exception error){
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body(error.getMessage());
+        }
+    }
+
+    @GetMapping
+    public ResponseEntity<?> obtener(){
+        try {
+            return ResponseEntity
+                    .status(HttpStatus.OK)
+                    .body(servicioSignoVital.buscarSignosVitales());
 
         }catch (Exception error){
             return ResponseEntity
